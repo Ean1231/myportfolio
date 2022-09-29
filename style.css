@@ -170,7 +170,7 @@ border-top: 03px solid #d63031;
         }
         }
     .leaf1{
-        transform: rotateX(180deg);
+        /* transform: rotateX(180deg); */
     }
     h2{
         position:absolute ;
