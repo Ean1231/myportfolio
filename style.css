@@ -41,6 +41,22 @@ body{
 #Experience .card{
 border-top: 03px solid #d63031;
 }
+
+#ECDPW:hover{
+background-color: lightgray;
+}
+#covid:hover{
+    background-color: lightgray;
+}
+#LinkitUp:hover{
+    background-color: lightgray;
+}
+
+#ecd:hover{
+    background-color: lightgray;
+}
+
+
 #Contact span{
     padding: 10px 20px 10px 20px;
 }
@@ -167,9 +183,7 @@ border-top: 03px solid #d63031;
             transform:translateX (-20px) rotate(225deg);
         }
         }
-    .leaf1{
-        /* transform: rotateX(180deg); */
-    }
+ 
     h2{
         position:absolute ;
         top:40%;
