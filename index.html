@@ -329,8 +329,8 @@
             <div class="col-lg-6" style="margin-top: 20px;">
                 <div class="card bg-white" style="border-top: 03px solid #4cc2c4">
                     <img src="img/person/croped/Logo 1.jpg" style="width: 190px; height: 100px;" class="img-fluid py-3 m-auto">
-                    <h3 class="text-center " style="color: #4cc2c4;">Intermediate Software Developer</h3>
-                    <p class="lead text-justify p-3">Company: Ayamah Tibaa <br> Position:Intermediate Software Developer<br>Duration: 01/2022 - Present <br>Contract end date: 09/2023 <br>Contact person: Takalani Tshivhase - 073 515 4500</p>
+                    <h3 class="text-center " style="color: #4cc2c4;">Software Developer</h3>
+                    <p class="lead text-justify p-3">Company: Ayamah Tibaa <br> Position:Intermediate Software Developer<br>Duration: 01/2022 - Present <br>Contract end date: 10/2024 <br>Contact person: Takalani Tshivhase - 073 515 4500</p>
                     <!-- <button id="ayamah" href="" style=" border: 1px solid lightblue;">View more</button> -->
                 </div> 
             </div>
@@ -433,14 +433,14 @@
 <!-- system -->
 
 <div id="Experience">
-    <div class="container mt-5 mb-5">
-        <span class="text-white" style="background-color: indigo;">Projects I've Worked on (Web App)</span><hr style="background-color: indigo;">
-        <div class="row">
+    <div onMouseOver="showText('Some Text')" onMouseOut="hide()" class="container mt-5 mb-5">
+        <span class="text-white" style="background-color: indigo;">Projects I've Worked on (Web App - System)</span><hr style="background-color: indigo;">
+        <div class="row" >
          
             <div class="col-lg-6">
                 <a href="https://idms.pimoecdpw.co.za/Identity/STS/Forms/Account/Login?ReturnUrl=%2fIdentity%2fsts%2fForms%2fwsfed%3fwa%3dwsignin1.0%26wtrealm%3dhttps%253a%252f%252fidms.pimoecdpw.co.za%252fRuntime%252f%26wctx%3drm%253d1%2526id%253dk2passive%2526ru%253d_trust%25252fspauthorize.aspx%25253fsession%25253d76d8f01f-23d7-4b67-8dd3-e6e1e7217edb%252526_spInt%25253d1%26wct%3d2023-08-31T10%253a24%253a00Z%26wreply%3dhttps%253a%252f%252fidms.pimoecdpw.co.za%252fRuntime%252f&wa=wsignin1.0&wtrealm=https%3a%2f%2fidms.pimoecdpw.co.za%2fRuntime%2f&wctx=rm%3d1%26id%3dk2passive%26ru%3d_trust%252fspauthorize.aspx%253fsession%253d76d8f01f-23d7-4b67-8dd3-e6e1e7217edb%2526_spInt%253d1&wct=2023-08-31T10%3a24%3a00Z&wreply=https%3a%2f%2fidms.pimoecdpw.co.za%2fRuntime%2f" id="ECDPW">
                     <div class="card" id="ECDPW" style="border-top: 03px solid #3cb371;">
-                        <img id="ecd" src="img/Apps shots/Screenshot (80).png" style="width: 500px; height: 335px;" class="img-fluid py-3 m-auto" title="Click to visit the C# web App">
+                        <img  id="ecd" src="img/Apps shots/IDMS Shot.png" style="width: 500px; height: 335px;" class="img-fluid py-3 m-auto" title="Click to visit the C# web App" >
                     </div>
                 </a>
             </div>
@@ -616,5 +616,13 @@
         </div>
     </div>
 </div>
+<script>
+    function showText(text){
+    document.getElementById("text").innerHTML=text;
+}
+function hide(){
+    document.getElementById("text").innerHTML="";
+}
+</script>
 </body>
 </html>
