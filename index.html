@@ -3,687 +3,857 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ean Bosman</title>
+    <title>Ean Bosman - Software Developer</title>
     <link rel="icon" type="image/x-icon" href="img/person/croped/croped_EanBosman-removebg-preview.png">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-    <script src="script.js"></script>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Courgette|Open+Sans&display=swap" rel="stylesheet"> 
-
 </head>
-<body data-spy="scroll" data-target=".navbar">
-   <!--Navigation-->
-<nav class="navbar navbar-expand-md navbar sticky-top" style="background-color: #2E2E2E; ">
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top modern-nav">
     <div class="container">
-        <a href="#About">
-            <img src="img/person/croped/new LOGOO Ean.png" alt="" style="height: 60px; width: 80px;">
+            <a class="navbar-brand" href="#home">
+                <img src="img/person/croped/new LOGOO Ean.png" alt="Ean Bosman Logo" class="logo-img">
+                <span class="brand-text">Ean Bosman</span>
         </a>
-      <!-- <h5>Ean Bosman</h5>  -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto" style=" gap: 50px;">
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
                 <li class="nav-item">
-                    <a style="color: white;" class="nav-link" href="#About">About </a>
+                        <a class="nav-link" href="#skills">Skills</a>
                 </li>
                 <li class="nav-item">
-                    <a style="color: white;" class="nav-link" href="#Skills">Skills</a>
+                        <a class="nav-link" href="#experience">Experience</a>
                 </li>
                 <li class="nav-item">
-                    <a style="color: white;" class="nav-link" href="#Experience">Experience</a>
+                        <a class="nav-link" href="#projects">Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a style="color: white;" class="nav-link" href="#footer">Contact</a>
+                        <a class="nav-link" href="#contact">Contact</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
 
-<!-- Showcase (The Picture)-->
-<!-- <img id="bg-img" src="img/silver-and-black-laptop-computer-1229861.jpg" alt=""> -->
-<section  id="bg-img">
-
-     <div class="leaf">
-     <div><img src="img/css3.png" height="55px" width="45px" style=" margin-left: -340px;"></img></div>
-      <div><img src="img/html5.png" height="55px" width="55px"></img></div>
-      <div><img src="img/2560px-Ionic_Logo.svg.png" height="40px" width="100px" ></img></div>
-      <div><img  src="img/5847ea22cef1014c0b5e4833.png" height="55px" width="55px"></img></div>
-     <div><img src="img/Csharp_Logo.png" height="75px" width="75px"></img></div>
-     <div><img src="img/Git-Icon-1788C.png" height="75px" width="75px"></div>
-     <div><img src="img/typescript.png" height="75px" width="75px"></div>
-     <!-- <div><img src="img/hubgtt.png" height="75px" width="75px"></div> -->
-     
-  
-            
-     </div>
-     <!-- Upside down -->
-     <div class="leaf leaf1">
-        <div><img src="img/Sql_data_base_with_logo.png" height="40px" width="100px" ></img></div>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-overlay"></div>
+        <!-- Tech Icons Animation -->
+        <div class="tech-icons">
+            <div class="tech-icon" data-tech="html">
+                <img src="img/html5.png" alt="HTML5">
+            </div>
+            <div class="tech-icon" data-tech="css">
+                <img src="img/css3.png" alt="CSS3">
+            </div>
+            <div class="tech-icon" data-tech="js">
+                <img src="img/JavaScript-logo.png" alt="JavaScript">
+            </div>
+            <div class="tech-icon" data-tech="ionic">
+                <img src="img/2560px-Ionic_Logo.svg.png" alt="Ionic">
+            </div>
+            <div class="tech-icon" data-tech="angular">
+                <img src="img/5847ea22cef1014c0b5e4833.png" alt="Angular">
+            </div>
+            <div class="tech-icon" data-tech="csharp">
+                <img src="img/Csharp_Logo.png" alt="C#">
+            </div>
+            <div class="tech-icon" data-tech="git">
+                <img src="img/Git-Icon-1788C.png" alt="Git">
+            </div>
+            <div class="tech-icon" data-tech="typescript">
+                <img src="img/typescript.png" alt="TypeScript">
+            </div>
+            <div class="tech-icon" data-tech="sql">
+                <img src="img/Sql_data_base_with_logo.png" alt="SQL">
+            </div>
+            <div class="tech-icon" data-tech="github">
+                <img src="img/hubgtt.png" alt="GitHub">
+            </div>
+        </div>
         
-    <!-- <div><img src="img/css3.png" height="75px" width="75px" ></img></div>
-    <div><img src="img/html5.png" height="75px" width="75px"></img></div>
-    <div><img src="img/Sql_data_base_with_logo.png" height="60px" width="100px" ></img></div>
-      <div><img src="img/5847ea22cef1014c0b5e4833.png" height="75px" width="75px"></img></div>
-       <div><img src="img/Csharp_Logo.png" height="75px" width="75px"></img></div>
-     <div><img src="img/Git-Icon-1788C.png" height="75px" width="75px" style=" margin-left: -250px;"></div>
-     
-             -->
+        <!-- Motherboard Connection Lines -->
+        <div class="tech-connections">
+            <div class="connection-line"></div>
+            <div class="connection-line"></div>
+            <div class="connection-line"></div>
+            <div class="connection-line"></div>
+            <div class="connection-line"></div>
+            <div class="connection-line"></div>
+            <div class="connection-line"></div>
+            <div class="connection-line"></div>
+            <div class="circuit-node"></div>
+            <div class="circuit-node"></div>
+            <div class="circuit-node"></div>
+            <div class="circuit-node"></div>
+        </div>
+        
+        <div class="container">
+            <div class="row min-vh-100 align-items-center">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="hero-title" data-aos="fade-up">
+                        Hi, I'm <span class="text-gradient">Ean Bosman</span>
+                    </h1>
+                    <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+                        Passionate Software Developer with 4+ years of experience in creating innovative web and mobile applications
+                    </p>
+                    <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
+                        <a href="#about" class="btn btn-primary btn-lg me-3">Learn More</a>
+                        <a href="cv/Resume of Ean Em Bosman.pdf" download="CV of Ean Bosman" class="btn btn-outline-light btn-lg">
+                            <i class="fas fa-download me-2"></i>Download CV
+                        </a>
+                    </div>
+                </div>
      </div>
-    
-     <div class="leaf leaf2">
-        <div><img src="img/hubgtt.png" height="75px" width="75px"  style="margin-left: 220px;"></div>
-        <div>   <img src="img/JavaScript-logo.png" height="55px" width="55px" style="margin-left: 150px;"></div>
-        <div><img src="img/poowerr-removebg-preview.png" height="40px" width="150px" style="margin-left: 550px;" ></img></div>
-        <!-- 
-        <div>  <img src="img/hubgtt.png" height="75px" width="75px" ></img></div>
-        <div><img src="img/html5.png" height="75px" width="75px"></img></div>
-        <div>  <img src="img/2560px-Ionic_Logo.svg.png" height="40px" width="100px" ></img></div>
-        <div><img  src="img/5847ea22cef1014c0b5e4833.png" height="75px" width="75px"></img></div>
-         <div> <img src="img/Csharp_Logo.png" height="75px" width="75px"></img></div>
-       <div>   <img src="img/Git-Icon-1788C.png" height="75px" width="75px"></div>
-       <div><img src="img/java-logo-1.png" height="75px" width="100px" style="margin-left: 100px;"></img></div>
-       <div><img src="img/hubgtt.png" height="75px" width="75px"></div>
-             -->
      </div> 
      </section>
 
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">About Me</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Passionate developer crafting digital experiences</p>
+            </div>
+            
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-5 mb-lg-0" data-aos="fade-right">
+                    <div class="about-image-container">
+                        <div class="about-image-wrapper">
+                            <img src="img/person/croped/Bosman.jpg" alt="Ean Bosman" class="about-image">
+                            <div class="image-overlay">
+                                <div class="overlay-content">
+                                    <i class="fas fa-code"></i>
+                                    <span>4+ Years Experience</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="floating-badge">
+                            <i class="fas fa-laptop-code"></i>
+                            <span>Full Stack Developer</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="about-content">
+                        <div class="name-title-section mb-4">
+                            <h3 class="about-name">Ean Macdonald Bosman</h3>
+                            <div class="title-badge">
+                                <i class="fas fa-terminal"></i>
+                                <span>Software Developer</span>
+                            </div>
+                        </div>
+                        
+                        <div class="about-description mb-4">
+                            <p class="lead-text">
+                                I am a dedicated and passionate software developer with a deep love for coding and problem-solving. 
+                                With a strong background in software development and 4 years of hands-on experience, I thrive on 
+                                turning innovative ideas into functional, user-friendly software applications.
+                            </p>
+                        </div>
+                        
+                        <div class="info-cards-grid mb-4">
+                            <div class="info-card" data-aos="zoom-in" data-aos-delay="100">
+                                <div class="info-icon">
+                                    <i class="fas fa-birthday-cake"></i>
+                                </div>
+                                <div class="info-content">
+                                    <span class="info-label">Age</span>
+                                    <span class="info-value">31 Years</span>
+                                </div>
+                            </div>
+                            
+                            <div class="info-card" data-aos="zoom-in" data-aos-delay="200">
+                                <div class="info-icon">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div class="info-content">
+                                    <span class="info-label">Phone</span>
+                                    <span class="info-value">084 689 4199</span>
+                                </div>
+                            </div>
+                            
+                            <div class="info-card" data-aos="zoom-in" data-aos-delay="300">
+                                <div class="info-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="info-content">
+                                    <span class="info-label">Email</span>
+                                    <span class="info-value">macdonaldbosman@gmail.com</span>
+                                </div>
+                            </div>
+                            
+                            <div class="info-card" data-aos="zoom-in" data-aos-delay="400">
+                                <div class="info-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="info-content">
+                                    <span class="info-label">Location</span>
+                                    <span class="info-value">South Africa</span>
+                                </div>
+                            </div>
+                            
+                            <div class="info-card" data-aos="zoom-in" data-aos-delay="500">
+                                <div class="info-icon">
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
+                                <div class="info-content">
+                                    <span class="info-label">Experience</span>
+                                    <span class="info-value">4+ Years</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="social-section">
+                            <h5 class="social-title">Let's Connect</h5>
+                            <div class="social-links-enhanced">
+                                <a href="https://www.linkedin.com/in/ean-macdonald-bosman-328a801a3" class="social-link-enhanced linkedin" target="_blank">
+                                    <i class="fab fa-linkedin-in"></i>
+                                    <span>LinkedIn</span>
+                                </a>
+                                <a href="https://github.com/Ean1231" class="social-link-enhanced github" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                    <span>GitHub</span>
+                                </a>
+                                <a href="https://www.facebook.com/macdonald.bosman.1" class="social-link-enhanced facebook" target="_blank">
+                                    <i class="fab fa-facebook-f"></i>
+                                    <span>Facebook</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-<!-- About Me -->
+            <div class="row mt-5">
+                <div class="col-12" data-aos="fade-up">
+                    <div class="journey-section">
+                        <h4 class="journey-title">My Development Journey</h4>
+                        <div class="journey-content">
+                            <div class="journey-item">
+                                <div class="journey-icon">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                                <div class="journey-text">
+                                    <p>
+                                        My journey in the world of technology has led me to specialize in web, web-app and mobile application development. 
+                                        I take pride in crafting clean, efficient, and scalable code that not only meets project requirements but also 
+                                        ensures a smooth user experience.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="journey-item">
+                                <div class="journey-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="journey-text">
+                                    <p>
+                                        In addition to my technical skills, I understand the importance of effective communication and collaboration 
+                                        in the software development process. I enjoy working in cross-functional teams, where I can share my expertise, 
+                                        learn from others, and collectively achieve project success.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-
-<div id="About" style="margin-top: 280px;">
-    <div class="container">
+    <!-- Skills Section -->
+    <section id="skills" class="py-5 bg-light">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">My Skills</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Here are some of my technical competencies</p>
+    </div>
+            
         <div class="row">
-            <div class="col">
-                <div id="AboutData">
-                    <div class="card bg-white">
-                        <div class="card-title my-5">
-                            <div class="media">
-                                <img src="img/person/croped/Bosman.jpg" width="250" height="50" class="img-fluid rounded-top mx-5 d-none d-lg-block" > 
-                                <div class="media-body">
-                                    <h3 class="display-4 ml-5">Ean Macdonald Bosman</h3>
-                                    <p class="text-muted ml-5">Software Developer</p>
-                                    <div class="container">
-                                        <table class="table table-responsive ml-4">
-                                            <tr>
-                                                <td class="text-muted">Age</td>
-                                                <td>:</td>
-                                                <td>31 Years old</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-muted">Email</td>
-                                                <td>:</td>
-                                                <td style="font-size: 15px;">macdonaldbosman@gmail.com</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-muted">Years Experience</td>
-                                                <td>:</td>
-                                                <td>4 (Years Software development)</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-muted">Phone</td>
-                                                <td>:</td>
-                                                <td>084 689 4199</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-muted">My cv</td>
-                                                <td>:</td>
-                                                <td>
-                                                    <a class="button" style="color: black; border: 1px solid grey; transition-duration: 0.4s;" href="cv/Resume of Ean Em Bosman.pdf" download="Ean Bosman CV"
-                                                    class="button is-outlined is-white">
-                                                    Download CV
-                                                    <span class="icon" style="margin-left: 5px"><i class="fas fa-download"></i></span>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                        </table>
+                <div class="col-lg-6 mb-4" data-aos="fade-right">
+                    <div class="skill-item">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="skill-name">Web Development</span>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="skill-name">Angular</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="skill-name">Ionic Framework</span>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="skill-name">Flutter Framework</span>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 80%"></div>
+            </div>
+        </div>
+    </div>
 
+                <div class="col-lg-6 mb-4" data-aos="fade-left">
+                    <div class="skill-item">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="skill-name">Agile Methodology</span>
+                            <span class="skill-percentage">98%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 98%"></div>
+</div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="skill-name">Java</span>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 80%"></div>
+                </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="skill-name">C#</span>
+                            <span class="skill-percentage">65%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 65%"></div>
+                </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="skill-name">MySQL Database</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="skill-name">Vue.js</span>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+                    </div>
+                </div>
+    </section>
+
+        <!-- Experience Section -->
+    <section id="experience" class="py-5">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Work Experience</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">My professional journey in software development</p>
+            </div>
+            
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                
+                <!-- Current Position -->
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+                    <div class="timeline-marker current">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div class="company-info">
+                                    <img src="img/work/428754-700x364-removebg-preview.png" alt="Techsys Digital" class="company-logo-small">
+                                    <div>
+                                        <h4>Front-End Developer</h4>
+                                        <h5>Techsys Digital</h5>
                                     </div>
                                 </div>
-                            </div> 
+                                <span class="timeline-duration current-badge">04/2024 - Present</span>
+                            </div>
+                            <div class="timeline-details">
+                                <p><i class="fas fa-phone"></i> Contact: Rachel Mcfarlane - 071 871 4514</p>
+                                <div class="timeline-actions">
+                                    <a href="https://www.techsys.co.za/" class="btn btn-primary btn-sm" target="_blank">
+                                        <i class="fas fa-external-link-alt"></i> Visit Company
+                                    </a>
+                                </div>
+                            </div>
+                    </div>
+                    </div>
+                </div>
 
+                <!-- Previous Positions -->
+                <div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div class="company-info">
+                                    <img src="img/person/croped/Logo 1.jpg" alt="Ayamah Tibaa" class="company-logo-small">
+                                    <div>
+                                        <h4>Intermediate Software Developer</h4>
+                                        <h5>Ayamah Tibaa</h5>
+                                    </div>
+                                </div>
+                                <span class="timeline-duration">01/2022 - 04/2024</span>
+                            </div>
+                            <div class="timeline-details">
+                                <p><i class="fas fa-phone"></i> Contact: Takalani Tshivhase - 073 515 4500</p>
+                                <p class="reason"><i class="fas fa-info-circle"></i> Reason for leaving: Exciting permanent position</p>
+                                <div class="timeline-actions">
+                                    <a href="https://ayamahtibaa.co.za/" class="btn btn-outline-primary btn-sm" target="_blank">
+                                        <i class="fas fa-external-link-alt"></i> Visit Company
+                                    </a>
+                                </div>
+                            </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div class="company-info">
+                                    <img src="img/work/mlab-green-2.png" alt="Mlab Northern Cape" class="company-logo-small">
+                                    <div>
+                                        <h4>Software Developer Intern</h4>
+                                        <h5>Mlab Northern Cape</h5>
+                                    </div>
+                                </div>
+                                <span class="timeline-duration">03/2020 - 02/2021</span>
+                            </div>
+                            <div class="timeline-details">
+                                <p><i class="fas fa-phone"></i> Contact: Kabelo Gaotlhaelwe - 079 339 5980</p>
+                                <p class="reason"><i class="fas fa-info-circle"></i> Reason for leaving: Contract ended</p>
+                                <div class="timeline-actions">
+                                    <a href="https://mlab.co.za/" class="btn btn-outline-primary btn-sm" target="_blank">
+                                        <i class="fas fa-external-link-alt"></i> Visit Company
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="card-footer bg-danger">
-                            <a href="https://www.facebook.com/macdonald.bosman.1"><i class="fab fa-facebook fa-2x mx-3" style="color: white;"></i></a>
-                            <a href="https://www.linkedin.com/in/ean-macdonald-bosman-328a801a3"><i class="fab fa-linkedin fa-2x mx-3" style="color: white;"></i></a>
-                            <a href="https://github.com/Ean1231"><i class="fab fa-github fa-2x mx-3" style="color: white;"></i></a>
+                    </div>
+                </div>
 
+                <div class="timeline-item" data-aos="fade-left" data-aos-delay="400">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div class="company-info">
+                                    <img src="img/person/croped/ATTI.png" alt="ATTI Computer Education" class="company-logo-small">
+                                    <div>
+                                        <h4>Software Developer Intern</h4>
+                                        <h5>ATTI Computer Education & Training (MICTSETA)</h5>
+                                    </div>
+                                </div>
+                                <span class="timeline-duration">02/2021 - 11/2021</span>
+                            </div>
+                            <div class="timeline-details">
+                                <p><i class="fas fa-phone"></i> Contact: Schalk Bruwer - 053 831 3367</p>
+                                <p class="reason"><i class="fas fa-info-circle"></i> Reason for leaving: Internship ended</p>
+                                <div class="timeline-actions">
+                                    <a href="https://attikimberley.co.za/" class="btn btn-outline-primary btn-sm" target="_blank">
+                                        <i class="fas fa-external-link-alt"></i> Visit Company
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-            </div>
-
-        </div>
-
-    </div>
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col">
-                <span class="bg-danger text-white">About Me</span><hr class="bg-danger">
-                <p class="lead text-justify">I am a dedicated and passionate software developer with a deep love for coding and problem-solving. With a strong background in software development and 4 years of hands-on experience, I thrive on turning innovative ideas into functional, user-friendly software applications.
-
-                    My journey in the world of technology has led me to specialize in web, web-app and mobile application development. I take pride in crafting clean, efficient, and scalable code that not only meets project requirements but also ensures a smooth user experience. My commitment to staying up-to-date with the latest industry trends and technologies allows me to deliver cutting-edge solutions to my clients.
-                    
-                    In addition to my technical skills, I understand the importance of effective communication and collaboration in the software development process. I enjoy working in cross-functional teams, where I can share my expertise, learn from others, and collectively achieve project success.
-                    
-                    My goal as a software developer is not only to write code but to create impactful software solutions that solve real-world problems and empower businesses to thrive in the digital age. I'm always excited to take on new challenges and contribute to innovative projects that make a difference.
-                    
-                    I believe that continuous learning and a passion for technology are the keys to staying ahead in this ever-evolving field.
-                    
-                    I am ready to tackle the next exciting project and bring my skills, creativity, and dedication to the table. Let's connect and explore how we can work together to turn your software ideas into reality.
-                    </p>
-            </div>
-        </div>
-    </div>
-
-</div>
-
-<!-- Skill -->
-<div id="Skills" class=" mt-5" >
-<div class="container" style="margin-bottom: 25px;">
-    <span class="bg-primary text-white">Some Of My Skills</span><hr class="bg-primary">
-    <div class="row" style="margin-bottom: 25px;">
-        <div class="col">
-            <div class="card bg-white">
-                <!-- HTML -->
-                <h3 class="ml-3 my-3">Web Development</h3>
-                <div class="progress mx-3">
-                    <div class=" progress-bar bg-dark" style="width: 95%;">
-                        95%
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="500">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div class="company-info">
+                                    <img src="img/work/DIGI TRANS.fw copy.png" alt="Digiticket SA" class="company-logo-small">
+                                    <div>
+                                        <h4>Software Developer</h4>
+                                        <h5>Digiticket SA</h5>
+                                    </div>
+                                </div>
+                                <span class="timeline-duration">03/2021 - 09/2021</span>
+                            </div>
+                            <div class="timeline-details">
+                                <p><i class="fas fa-phone"></i> Contact: Tshepang Peme - 078 104 9263</p>
+                                <p class="reason"><i class="fas fa-info-circle"></i> Reason for leaving: Contract ended</p>
+                                <div class="timeline-actions">
+                                    <a href="https://www.digiticket.co.za/" class="btn btn-outline-primary btn-sm" target="_blank">
+                                        <i class="fas fa-external-link-alt"></i> Visit Company
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <!-- CSS -->
-                <h3 class="ml-3 my-3">Agile Methodology</h3>
-                <div class="progress mx-3">
-                    <div class=" progress-bar bg-dark" style="width: 98%;">
-                        98%
-                    </div>
-                </div>
-                <!-- JavaScript -->
-                <!-- <h3 class="ml-3 my-3">JavaScript</h3>
-                <div class="progress mx-3">
-                    <div class=" progress-bar bg-dark" style="width: 75%;">
-                        75%
-                    </div>
-                </div> -->
-                <!-- PHP -->
-                <!-- <h3 class="ml-3 my-3">PHP</h3>
-                <div class="progress mx-3">
-                    <div class=" progress-bar bg-dark" style="width: 90%;">
-                        90%
-                    </div>
-                </div> -->
-                <!-- Java -->
-                <h3 class="ml-3 my-3">Java</h3>
-                <div class="progress mx-3">
-                    <div class=" progress-bar bg-dark" style="width: 80%;">
-                        80%
-                    </div>
-                </div>
-                <!-- C# -->
-                <h3 class="ml-3 my-3">C#</h3>
-                <div class="progress mx-3">
-                    <div class=" progress-bar bg-dark" style="width: 65%;">
-                        65%
-                    </div>
-                </div>
-                <!-- JQuery -->
-                <!-- <h3 class="ml-3 my-3">JQuery</h3>
-                <div class="progress mx-3">
-                    <div class=" progress-bar bg-dark" style="width: 75%;">
-                        75%
-                    </div>
-                </div> -->
-                <!-- Database programming -->
-                <!-- <h3 class="ml-3 my-3">Database programming</h3>
-                <div class="progress mx-3">
-                    <div class=" progress-bar bg-dark" style="width: 90%;">
-                        90%
-                    </div>
-                </div> -->
-                <!-- MySql database -->
-                <h3 class="ml-3 my-3">MySql database</h3>
-                <div class="progress mx-3">
-                    <div class=" progress-bar bg-dark" style="width: 90%;">
-                        90%
-                    </div>
-                </div>
-
-                <!-- PhpMyAdmin -->
-                <!-- <h3 class="ml-3 my-3">PhpMyAdmin</h3>
-                <div class="progress mx-3">
-                    <div class=" progress-bar bg-dark" style="width: 95%;">
-                        95%
-                    </div>
-                </div> -->
-
-                <!-- Bootstrap -->
-                <!-- <h3 class="ml-3 my-3">Bootstrap</h3>
-                <div class="progress mx-3">
-                    <div class=" progress-bar bg-dark" style="width:78%;">
-                        78%
-                    </div>
-                </div> -->
-
-                <!-- Angular framework -->
-                <h3 class="ml-3 my-3">Angular</h3>
-                <div class="progress mx-3">
-                    <div class=" progress-bar bg-dark" style="width: 85%;">
-                        85%
-                    </div>
-                </div>
-
-                <!-- Ionic framework -->
-                <h3 class="ml-3 my-3">Ionic framework</h3>
-                <div class="progress mx-3" >
-                    <div class=" progress-bar bg-dark" style="width: 80%;">
-                        80%
-                    </div>
-                </div>
-                <!-- Flutter -->
-                <h3 class="ml-3 my-3">Flutter framework</h3>
-                <div class="progress mx-3" >
-                    <div class=" progress-bar bg-dark" style="width: 80%;">
-                        80%
-                    </div>
-                </div>
-                <!-- Vue.js -->
-                <h3 class="ml-3 my-3">Vue.js</h3>
-                <div class="progress mx-3" >
-                    <div class=" progress-bar bg-dark" style="width: 80%;">
-                        80%
-                    </div>
-                </div>
-                <br><br>
             </div>
         </div>
-    </div>
-</div>
-</div>
+    </section>
 
-<!-- Experience Mobile-->
-<div id="Experience">
-    <div class="container mt-5 mb-5">
-        <span class="bg-success text-white">Experience</span><hr class="bg-success">
-        <div class="row">
-
-            <div class="col-lg-6" style="margin-top: 20px;">
-                <a href="https://www.techsys.co.za/" style="text-decoration: none; color: #000;">
-                    <div class="card bg-white" style="border-top: 03px solid #000">
-                        <img src="img/work/428754-700x364-removebg-preview.png" style="width: 220px; height: 100px;" class="img-fluid py-3 m-auto">
-                        <h3 class="text-center " style="color: #000;">Techsys Digital</h3>
-                        <p class="lead text-justify p-3">Company: Techsys <br> Position:Front-End Developer<br>Duration: 04/2024 - Present <br>Contact person: Rachel Mcfarlane - 071 871 4514</p>
-                        <!-- <button id="ayamah" href="" style=" border: 1px solid lightblue;">View more</button> -->
-                    </div>
-                </a>
- 
-            </div>
-
-            <div class="col-lg-6" style="margin-top: 20px;">
-                <a href="https://ayamahtibaa.co.za/" style="text-decoration: none; color: #000;">
-                    <div class="card bg-white" style="border-top: 03px solid #4cc2c4">
-                        <img src="img/person/croped/Logo 1.jpg" style="width: 190px; height: 100px;" class="img-fluid py-3 m-auto">
-                        <h3 class="text-center " style="color: #4cc2c4;">Software Developer</h3>
-                        <p class="lead text-justify p-3">Company: Ayamah Tibaa <br> Position:Intermediate Software Developer<br>Duration: 01/2022 - 04/2024 <br>Reason for leaving: Exciting permanent position<br>Contact person: Takalani Tshivhase - 073 515 4500</p>
-                        <!-- <button id="ayamah" href="" style=" border: 1px solid lightblue;">View more</button> -->
-                    </div>
-                </a>
- 
-            </div>
-
-            <div class="col-lg-6" style="margin-top: 20px;">
-                <a href="https://mlab.co.za/" style="text-decoration: none; color: #000;">
-                    <div class="card bg-white" style="border-top: 03px solid #7fe817">
-                        <img src="img/work/mlab-green-2.png" style="width: 140px; height: 100px;" class="img-fluid py-3 m-auto">
-                        <br>
-                        <h3 class="text-center " style="color: #7fe817;">Software Developer Intern</h3>
-                        <p class="lead text-justify p-3">Company: Mlab Northern Cape <br> Position: Software Developer Intern <br>Duration: 03/2020 - 02/2021 <br>Reason for leaving: Contract ended <br>Contact person: kabelo Gaotlhaelwe - 079 339 5980 </p>
-                        <!-- <button onclick="mlab()" id="mlab" href="" style=" border: 1px solid limegreen;">View more</button> -->
-                    </div>
-                </a>
-
-            </div>
-
-            
-            <div class="col-lg-6" style="margin-top: 20px;">
-                <a href="https://attikimberley.co.za/" style="text-decoration: none; color: #000;">
-                    <div class="card bg-white" style="border-top: 03px solid #282a6b;">
-                        <img src="img/person/croped/ATTI.png" style="width: 180px; height:100px;" class="img-fluid py-3 m-auto">
-                        <h3 class="text-center" style="color: #282a6b;">Software Developer Intern</h3>
-                        <p class="lead text-justify p-3">Company: ATTI Computer Education & Training (<strong style="color: #0a6188;">MICT</strong><strong style="color: grey;">SETA</strong>)<br> Position: Software Developer Intern<br>Duration: 02/2021 - 11/2021 <br>Reason for leaving: Internship Ended <br>Contact person:  Schalk Bruwer - 053 831 3367 </p>
-                        <!-- <button id="atti" href="" style=" border: 1px solid rgb(7, 7, 95);">View more</button> -->
-                    </div>
-                </a>
+    <!-- Projects Section -->
+    <section id="projects" class="py-5 bg-light">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">My Projects</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Some of the projects I've worked on</p>
             </div>
             
-            <div class="col-lg-6" style="margin-top: 20px;">
-                <a href="https://http://digiticket.co.za/">
-                    <div class="card bg-white" style="border-top: 03px solid #02679a;" >
-                        <img src="img/work/DIGI TRANS.fw copy.png" style="width: 230px; height: 125px;" class="img-fluid py-3 m-auto">
-                        <h3 class="text-center" style="color: #02679a;">Software Developer</h3>
-                        <p class="lead text-justify p-3">Company: Digiticket SA<br> Position: Software Developer <br>Duration: 03/2021 - 09/2021 <br>Reason for leaving: Contract ended <br>Contact person: Tshepang Peme - 078 104 9263</p>
-                        <!-- <button onclick="digiticket()"  style=" border: 1px solid #02679a;" id="digiticket">View more</button> -->
-                    </div>
-                </a>
-
-            </div>
-<br>
-
-
-
-
-    
-
-
-            <br><br>
+            <!-- Project Categories -->
+            <ul class="nav nav-pills justify-content-center mb-5" id="projectTabs">
+                <li class="nav-item">
+                    <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#mobile-apps">Mobile Apps</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#websites">Websites</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#web-apps">Web Applications</button>
+                </li>
+            </ul>
             
+            <div class="tab-content">
+                <!-- Mobile Apps -->
+                <div class="tab-pane fade show active" id="mobile-apps">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <img src="img/Apps shots/Screenshot_20230831_120940.jpg" alt="PimoApp">
+                                    <div class="project-overlay">
+                                        <a href="https://github.com/Ean1231/PimoApp" class="btn btn-light" target="_blank">
+                                            <i class="fab fa-github me-2"></i>View Code
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <h5>PimoApp</h5>
+                                    <p>Flutter project management app for Eastern-cape public works</p>
+    </div>
+</div>
+</div>
+
+                        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <img src="img/Apps shots/Linkit-up.png" alt="Linkit-up">
+                                    <div class="project-overlay">
+                                        <a href="https://github.com/Ean1231/Linkit-up" class="btn btn-light" target="_blank">
+                                            <i class="fab fa-github me-2"></i>View Code
+                                        </a>
+            </div>
+                    </div>
+                                <div class="project-content">
+                                    <h5>Linkit-up</h5>
+                                    <p>Ionic Educational app that links you to an institution, supplies with latest question papers ect.</p>
+            </div>
+                    </div>
+            </div>
+
+                        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <img src="img/Apps shots/covid new.png" alt="COVID-19 App">
+                                    <div class="project-overlay">
+                                        <a href="https://github.com/Ean1231/covid-19-app" class="btn btn-light" target="_blank">
+                                            <i class="fab fa-github me-2"></i>View Code
+                </a>
+            </div>
+                    </div>
+                                <div class="project-content">
+                                    <h5>COVID-19 Tracker</h5>
+                                    <p>Ionic health tracking app</p>
         </div>
     </div>
 </div>
 
-<!--Github Links to some Projects -->
-<div id="Experience">
-    <div class="container mt-5 mb-5">
-        <span class="text-white" style="background-color: indigo;">Projects i`ve worked on (Mobile Apps)</span><hr style="background-color: indigo;">
-        <div class="row" >
-         
-            <div class="col-lg-4" >
-                <a  href="https://github.com/Ean1231/PimoApp" id="ECDPW" >
-                    <div class="card " id="ECDPW" style="border-top: 03px solid #3cb371;" >
-                        <img id="ecd" src="img/Apps shots/Screenshot_20230831_120940.jpg" style="width: 150px; height: 335px;" class="img-fluid py-3 m-auto" title="Click to visit the Flutter project">
+                        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <img src="img/Apps shots/image.png" alt="Car Wash App">
+                                    <div class="project-overlay">
+                                        <a href="https://carwashapp-df164.web.app" class="btn btn-light" target="_blank">
+                                            <i class="fas fa-external-link-alt me-2"></i>View Live
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <h5>Car Wash App</h5>
+                                    <p>Ionic service booking app</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </a>
+                </div>
                 
+                <!-- Websites -->
+                <div class="tab-pane fade" id="websites">
+                    <div class="row">
+                        <div class="col-lg-6 mb-4" data-aos="fade-up">
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <img src="img/Apps shots/Ayamah.png" alt="Ayamah Tibaa">
+                                    <div class="project-overlay">
+                                        <a href="https://ayamahtibaa.co.za/" class="btn btn-light" target="_blank">
+                                            <i class="fas fa-external-link-alt me-2"></i>Visit Site
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <h5>Ayamah Tibaa</h5>
+                                    <p>Corporate website with modern design</p>
             </div>
-<br>
+                    </div>
+            </div>
 
-            <div class="col-lg-4">
-                <a href="https://github.com/Ean1231/Linkit-up" id="LinkitUp">
-                    <div class="card " id="LinkitUp" style="border-top: 03px solid indigo">
-                        <img src="img/Apps shots/Linkit-up.png" style="width: 150px; height: 335px;" class="img-fluid py-3 m-auto" title="Click to visit the Ionic project">
-                      
-                    </div>
-                </a>
-             
-            </div>
-
-            <div class="col-lg-4">
-                <a href="https://github.com/Ean1231/covid-19-app" id="covid">
-                    <div class="card " id="covid" style="border-top: 03px solid rgb(48, 45, 45);">
-                        <img src="img/Apps shots/covid new.png" style="width: 150px; height:335px;" class="img-fluid py-3 m-auto" title="Click to visit the  Ionic project">
-                    </div>
-                </a>
-            </div><br>
-            <div class="col-lg-4">
-                <a href="https://carwashapp-df164.web.app" id="LinkitUp">
-                    <div class="card " id="LinkitUp" style="border-top: 03px solid #4c67ff">
-                        <img src="img/Apps shots/image.png" style="width: 150px; height: 335px;" class="img-fluid py-3 m-auto" title="Click to visit the Ionic project">
-                    </div>
+                        <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <img src="img/Screenshot 2025-02-13 151426.png" alt="All Deliveries">
+                                    <div class="project-overlay">
+                                        <a href="https://all-deliveries.web.app" class="btn btn-light" target="_blank">
+                                            <i class="fas fa-external-link-alt me-2"></i>Visit Site
                 </a>
             </div>
+        </div>
+                                <div class="project-content">
+                                    <h5>All Deliveries</h5>
+                                    <p>Delivery service platform</p>
         </div>
     </div>
 </div>
 
-<!-- Sites -->
-
-<div id="Experience">
-    <div class="container mt-5 mb-5">
-        <span class="text-white" style="background-color: indigo;">Projects i`ve worked on (Websites)</span><hr style="background-color: indigo;">
-        <div class="row" >
-         
-            <div class="col-lg-6" >
-                <a  href="https://ayamahtibaa.co.za/" id="ECDPW" >
-                    <div class="card " id="ECDPW" style="border-top: 03px solid #3cb371;" >
-                        <img id="ecd" src="img/Apps shots/Ayamah.png" style="width: 500px; height: 335px;" class="img-fluid py-3 m-auto" title="Click to visit the website">
+                        <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <img src="img/Apps shots/Digiticket.png" alt="Digiticket">
+                                    <div class="project-overlay">
+                                        <a href="https://www.digiticket.co.za/" class="btn btn-light" target="_blank">
+                                            <i class="fas fa-external-link-alt me-2"></i>Visit Site
+                                        </a>
+                                    </div>
                     </div>
-                </a>
-                
+                                <div class="project-content">
+                                    <h5>Digiticket</h5>
+                                    <p>Digital ticketing platform</p>
             </div>
-<br>
-
-            <div class="col-lg-6">
-                <a href="https://www.nyarayouthdevelopment.co.za/" id="LinkitUp">
-                    <div class="card " id="LinkitUp" style="border-top: 03px solid indigo">
-                        <img src="img/Apps shots/Nyara.png" style="width: 500px; height: 335px;" class="img-fluid py-3 m-auto" title="Click to visit the website">
-                      
                     </div>
-                </a>
-             
             </div>
 
-            <div class="col-lg-6">
-                <a href="https://www.digiticket.co.za/" id="covid">
-                    <div class="card " id="covid" style="border-top: 03px solid rgb(48, 45, 45);">
-                        <img src="img/Apps shots/Digiticket.png" style="width: 500px; height:335px;" class="img-fluid py-3 m-auto" title="Click to visit the website">
-                      
-                    </div>
-                </a>
-               
+                        <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <img src="img/Apps shots/AMB.png" alt="AMB Website">
+                                    <div class="project-overlay">
+                                        <a href="https://ean1231.github.io/AMB_website/" class="btn btn-light" target="_blank">
+                                            <i class="fas fa-external-link-alt me-2"></i>Visit Site
+                                        </a>
             </div>     
-            <div class="col-lg-6">
-                <a href="https://ean1231.github.io/AMB_website/" id="covid">
-                    <div class="card " id="covid" style="border-top: 03px solid rgb(48, 45, 45);">
-                        <img src="img/Apps shots/AMB.png" style="width: 500px; height:335px;" class="img-fluid py-3 m-auto" title="Click to visit the website">
-                      
                     </div>
-                </a>
-               
-            </div>   
-            <br><br>
-            
+                                <div class="project-content">
+                                    <h5>AMB Website</h5>
+                                    <p>Professional business website</p>
         </div>
     </div>
 </div>
-<!-- system -->
-
-<div id="Experience">
-    <div onMouseOver="showText('Some Text')" onMouseOut="hide()" class="container mt-5 mb-5">
-        <span class="text-white" style="background-color: indigo;">Projects I've Worked on (Web App - System)</span><hr style="background-color: indigo;">
-        <div class="row" >
-         
-            <div class="col-lg-6">
-                <a href="https://idms.pimoecdpw.co.za/Identity/STS/Forms/Account/Login?ReturnUrl=%2fIdentity%2fsts%2fForms%2fwsfed%3fwa%3dwsignin1.0%26wtrealm%3dhttps%253a%252f%252fidms.pimoecdpw.co.za%252fRuntime%252f%26wctx%3drm%253d1%2526id%253dk2passive%2526ru%253d_trust%25252fspauthorize.aspx%25253fsession%25253d76d8f01f-23d7-4b67-8dd3-e6e1e7217edb%252526_spInt%25253d1%26wct%3d2023-08-31T10%253a24%253a00Z%26wreply%3dhttps%253a%252f%252fidms.pimoecdpw.co.za%252fRuntime%252f&wa=wsignin1.0&wtrealm=https%3a%2f%2fidms.pimoecdpw.co.za%2fRuntime%2f&wctx=rm%3d1%26id%3dk2passive%26ru%3d_trust%252fspauthorize.aspx%253fsession%253d76d8f01f-23d7-4b67-8dd3-e6e1e7217edb%2526_spInt%253d1&wct=2023-08-31T10%3a24%3a00Z&wreply=https%3a%2f%2fidms.pimoecdpw.co.za%2fRuntime%2f" id="ECDPW">
-                    <div class="card" id="ECDPW" style="border-top: 03px solid #3cb371;">
-                        <img  id="ecd" src="img/Apps shots/IDMS Shot.png" style="width: 500px; height: 335px;" class="img-fluid py-3 m-auto" title="Click to visit the C# web App" >
                     </div>
-                </a>
             </div>
 
-            <div class="col-lg-6">
-                <a href="https://tracking-7211d.web.app/" id="Fratelli Analytics">
-                    <div class="card" id="ECDPW" style="border-top: 03px solid lightblue;">
-                        <img  id="ecd" src="img/Apps shots/Screenshot 2025-01-21 150608.png" style="width: 500px; height: 335px;" class="img-fluid py-3 m-auto" title="Click to visit the C# web App" >
-                    </div>
+                <!-- Web Applications -->
+                <div class="tab-pane fade" id="web-apps">
+                    <div class="row">
+                        <div class="col-lg-6 mb-4" data-aos="fade-up">
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <img src="img/Apps shots/IDMS Shot.png" alt="IDMS System">
+                                    <div class="project-overlay">
+                                        <a href="https://idms.pimoecdpw.co.za" class="btn btn-light" target="_blank">
+                                            <i class="fas fa-external-link-alt me-2"></i>View System
                 </a>
-            </div>
-            <br><br>
+                                </div>
+                                </div>
+                                <div class="project-content">
+                                    <h5>IDMS System</h5>
+                                    <p>Identity Management System built with C#</p>
         </div>
     </div>
 </div>
 
-
-<!-- Footer -->
-<footer class="page-footer font-small indigo" style="background-color: #1e4356" id="footer">
-
-    <!-- Footer Links -->
-    <div class="container">
-  
-      <!-- Grid row-->
-      <div class="row text-center d-flex justify-content-center pt-5 mb-3">
-  
-        <!-- Grid column -->
-        <div class="col-md-2 mb-3">
-          <h6 class="text-uppercase font-weight-bold">
-            <a style="color: white;" href="#About">About</a>
-          </h6>
+                        <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <img src="img/Apps shots/Screenshot 2025-01-21 150608.png" alt="Fratelli Analytics">
+                                    <div class="project-overlay">
+                                        <a href="https://tracking-7211d.web.app/" class="btn btn-light" target="_blank">
+                                            <i class="fas fa-external-link-alt me-2"></i>View App
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <h5>Fratelli Analytics</h5>
+                                    <p>Advanced tracking and analytics platform</p>
+                                </div>
         </div>
-        <!-- Grid column -->
-  
-        <!-- Grid column -->
-        <div class="col-md-2 mb-3">
-          <h6 class="text-uppercase font-weight-bold">
-            <a style="color: white;" href="#Skills">Skills</a>
-          </h6>
         </div>
-        <!-- Grid column -->
-  
-        <!-- Grid column -->
-        <div class="col-md-2 mb-3">
-          <h6 class="text-uppercase font-weight-bold">
-            <a style="color: white;" href="#Experience">Experience</a>
-          </h6>
+        
+        <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="img/Apps shots/Screenshot 2025-06-24 193834.png" alt="Crud Dashboard">
+                    <div class="project-overlay">
+                        <a href="https://dashboard-72709.web.app/home" class="btn btn-light" target="_blank">
+                            <i class="fas fa-external-link-alt me-2"></i>View App
+                        </a>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h5>Crud Dashboard</h5>
+                    <p>Crud Dashboard for Linkit-up app built with Angular</p>
+                </div>
+</div>
+</div>
         </div>
-        <!-- Grid column -->
-  
-  
-  
-        <!-- Grid column -->
-        <div class="col-md-2 mb-3">
-          <h6 class="text-uppercase font-weight-bold">
-            <a style="color: white;" href="#footer">Contact</a>
-          </h6>
         </div>
-        <!-- Grid column -->
-  
       </div>
-      <!-- Grid row-->
-      <hr class="rgba-white-light" style="margin: 0 15%;">
-  
-      <!-- Grid row-->
-      <div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
-  
-        <!-- Grid column -->
-        <div class="col-md-8 col-12 mt-5">
-            <h5 class="font-weight-bold text-uppercase ">Contact</h5><br>
-          <p style="line-height: 1.7rem; color: white;" >
-            Cell: 084 689 4199
-        </p>
-        <p style="line-height: 1.7rem; color: white;">
-            Email: macdonaldbosman@gmail.com
-        </p>
         </div>
-        <!-- Grid column -->
-  
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Let's discuss how we can work together</p>
       </div>
-      <!-- Grid row-->
-      <hr class="clearfix d-md-none rgba-white-light" style="margin: 10% 15% 5%; color: white;">
-  
-      <!-- Grid row-->
-      <div class="row pb-3">
-  
-        <!-- Grid column -->
-        <div class="col-md-12">
-  
-          <div class="mb-5 flex-center" style="margin-left:495px ;">
-  
-            <!-- Facebook -->
-            <a style="color: white;" style="margin-left: 10px;" class="fb-ic" href="https://www.facebook.com/macdonald.bosman.1">
-              <i class="fab fa-facebook-f fa-lg white-text mr-4"> </i>
-            </a>
-            <!-- Twitter 
-              <a class="tw-ic">
-              <i class="fab fa-twitter fa-lg white-text mr-4"> </i>
-            </a>-->
-          
-            <!-- Google +-->
-            <a style="color: white;" class="gplus-ic" href="https://github.com/Ean1231">
-              <i class="fab fa-github fa-lg white-text mr-4"> </i>
-            </a>
-            <!--Linkedin -->
-            <a style="color: white;" class="li-ic"  href="https://www.linkedin.com/in/ean-macdonald-bosman-328a801a3">
-              <i class="fab fa-linkedin-in fa-lg white-text mr-4"> </i>
-            </a>
-            <!--Instagram <a class="ins-ic">
-              <i class="fab fa-instagram fa-lg white-text mr-4"> </i>
-            </a>-->
             
-            <!--Pinterest
-             <a class="pin-ic">
-              <i class="fab fa-pinterest fa-lg white-text"> </i>
-            </a>-->
-           
-  
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-info text-center" data-aos="fade-up">
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="contact-item">
+                                    <i class="fas fa-phone-alt"></i>
+                                    <h5>Phone</h5>
+                                    <p>084 689 4199</p>
           </div>
-  
         </div>
-        <!-- Grid column -->
-  
-      </div>
-      <!-- Grid row-->
-  
+                            <div class="col-md-6 mb-4">
+                                <div class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <h5>Email</h5>
+                                    <p>macdonaldbosman@gmail.com</p>
     </div>
-    <!-- Footer Links -->
-  
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">
     </div>
-    <!-- Copyright -->
-  
-  </footer>
-  <!-- Footer -->
-
-<!-- Contact -->
-<!-- <div id="Contact">
-    <div class="container mt-5">
-        <span class="bg-dark text-white">Contact Me</span><hr class="bg-dark">
-        <div class="row">
-            <div class="col">
-                <div class="card bg-white">
-                    <div class="card-header">
-                        <h4 class="my-4">Contact me below</h4>
-
-                        <div class="form-group">
-                            <input type="text" placeholder="User Name" class="form-control">
                         </div>
 
-                        <div class="form-group">
-                            <input type="text" placeholder="Email" class="form-control">
+                        <div class="social-links-large mt-4">
+                            <a href="https://www.linkedin.com/in/ean-macdonald-bosman-328a801a3" class="social-link-large" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/Ean1231" class="social-link-large" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.facebook.com/macdonald.bosman.1" class="social-link-large" target="_blank">
+                                <i class="fab fa-facebook"></i>
+                            </a>
                         </div>
-
-                    <div class="form-group">
-                         <textarea class="form-control" placeholder="Write something here..."></textarea>                        
                     </div>
-
-                    <div class="form-group">
-                        <button class="btn btn-success text-white">Submit</button>
-                    </div>
-                   
-                
                 </div>
             </div>
         </div>
-    </div>
-
-</div> -->
+    </section>
 
 <!-- Footer -->
-
-<div class="container-fluid bg-dark  ">
-    <div class="row">
-        <div class="col">
+    <footer class="footer py-4">
             <div class="container">
-                <p class="text-white pt-3 text-center">© 2025 Ean Macdonald Bosman</p>
-
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 Ean Macdonald Bosman. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">Fueling Innovation, One Line at a Time.</p>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-<script>
-    function showText(text){
-    document.getElementById("text").innerHTML=text;
-}
-function hide(){
-    document.getElementById("text").innerHTML="";
-}
-</script>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+    
+    <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CVH9KHFNBB"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
