@@ -156,13 +156,150 @@ document.addEventListener('DOMContentLoaded', function() {
     const submitBtn = document.getElementById('submit-btn');
     const formMessages = document.getElementById('form-messages');
     
+    // Form validation functions
+    function validateEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+    
+    function validateForm(formData) {
+        const errors = [];
+        
+        // Name validation
+        const name = formData.get('user_name').trim();
+        if (name.length < 2) {
+            errors.push('Please enter a valid name (at least 2 characters)');
+        }
+        
+        // Email validation
+        const email = formData.get('user_email').trim();
+        if (!validateEmail(email)) {
+            errors.push('Please enter a valid email address');
+        }
+        
+        // Subject validation
+        const subject = formData.get('subject').trim();
+        if (subject.length < 3) {
+            errors.push('Please enter a valid subject (at least 3 characters)');
+        }
+        
+        // Message validation
+        const message = formData.get('message').trim();
+        if (message.length < 10) {
+            errors.push('Please enter a message with at least 10 characters');
+        }
+        
+        return errors;
+    }
+    
+    function showMessage(type, message) {
+        formMessages.className = type;
+        formMessages.innerHTML = message;
+        formMessages.style.display = 'block';
+        
+        // Scroll to message if it's not visible
+        formMessages.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        
+        // Auto-hide success messages after 5 seconds
+        if (type === 'success') {
+            setTimeout(() => {
+                formMessages.style.display = 'none';
+            }, 5000);
+        }
+    }
+    
+    function resetSubmitButton() {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<i class="fas fa-paper-plane me-2"></i>Send Message';
+    }
+    
+    function setLoadingState() {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
+    }
+    
+    // Real-time validation feedback
+    function addFieldValidation() {
+        const fields = contactForm.querySelectorAll('input, textarea');
+        
+        fields.forEach(field => {
+            field.addEventListener('blur', function() {
+                const value = this.value.trim();
+                const fieldName = this.name;
+                let isValid = true;
+                let errorMessage = '';
+                
+                // Remove previous error styling
+                this.classList.remove('is-invalid', 'is-valid');
+                
+                if (value === '') {
+                    isValid = false;
+                    errorMessage = 'This field is required';
+                } else {
+                    switch (fieldName) {
+                        case 'user_name':
+                            if (value.length < 2) {
+                                isValid = false;
+                                errorMessage = 'Name must be at least 2 characters';
+                            }
+                            break;
+                        case 'user_email':
+                            if (!validateEmail(value)) {
+                                isValid = false;
+                                errorMessage = 'Please enter a valid email address';
+                            }
+                            break;
+                        case 'subject':
+                            if (value.length < 3) {
+                                isValid = false;
+                                errorMessage = 'Subject must be at least 3 characters';
+                            }
+                            break;
+                        case 'message':
+                            if (value.length < 10) {
+                                isValid = false;
+                                errorMessage = 'Message must be at least 10 characters';
+                            }
+                            break;
+                    }
+                }
+                
+                // Apply validation styling
+                if (value !== '') {
+                    this.classList.add(isValid ? 'is-valid' : 'is-invalid');
+                }
+                
+                // Show/hide field error message
+                let errorDiv = this.parentNode.querySelector('.field-error');
+                if (!isValid && value !== '') {
+                    if (!errorDiv) {
+                        errorDiv = document.createElement('div');
+                        errorDiv.className = 'field-error';
+                        this.parentNode.appendChild(errorDiv);
+                    }
+                    errorDiv.textContent = errorMessage;
+                } else if (errorDiv) {
+                    errorDiv.remove();
+                }
+            });
+            
+            // Clear validation on focus
+            field.addEventListener('focus', function() {
+                this.classList.remove('is-invalid');
+                const errorDiv = this.parentNode.querySelector('.field-error');
+                if (errorDiv) {
+                    errorDiv.remove();
+                }
+            });
+        });
+    }
+    
     if (contactForm) {
+        // Add field validation
+        addFieldValidation();
+        
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            
-            // Disable submit button and show loading
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
             
             // Hide previous messages
             formMessages.style.display = 'none';
@@ -170,13 +307,30 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Get form data
             const formData = new FormData(contactForm);
+            
+            // Validate form
+            const validationErrors = validateForm(formData);
+            
+            if (validationErrors.length > 0) {
+                showMessage('error', 
+                    '<i class="fas fa-exclamation-triangle me-2"></i>' +
+                    '<strong>Please fix the following errors:</strong><br>' +
+                    validationErrors.map(error => `• ${error}`).join('<br>')
+                );
+                return;
+            }
+            
+            // Show loading state
+            setLoadingState();
+            
+            // Prepare template parameters
             const templateParams = {
                 to_name: 'Ean Bosman',
-                username: formData.get('user_name'),
-                email: formData.get('user_email'),
-                subject: formData.get('subject'),
-                contact: formData.get('user_email'), // Using email since we don't have phone field
-                message: formData.get('message')
+                username: formData.get('user_name').trim(),
+                email: formData.get('user_email').trim(),
+                subject: formData.get('subject').trim(),
+                contact: formData.get('user_email').trim(),
+                message: formData.get('message').trim()
             };
             
             // Send email using EmailJS
@@ -185,23 +339,45 @@ document.addEventListener('DOMContentLoaded', function() {
                     console.log('Email sent successfully:', response);
                     
                     // Show success message
-                    formMessages.innerHTML = '<i class="fas fa-check-circle me-2"></i>Thank you! Your message has been sent successfully. I\'ll get back to you within 24 hours.';
-                    formMessages.className = 'success';
+                    showMessage('success', 
+                        '<i class="fas fa-check-circle me-2"></i>' +
+                        '<strong>Success!</strong> Your message has been sent successfully. ' +
+                        'I\'ll get back to you within 24 hours.'
+                    );
                     
-                    // Reset form
+                    // Reset form and clear validation
                     contactForm.reset();
+                    const fields = contactForm.querySelectorAll('input, textarea');
+                    fields.forEach(field => {
+                        field.classList.remove('is-valid', 'is-invalid');
+                        const errorDiv = field.parentNode.querySelector('.field-error');
+                        if (errorDiv) errorDiv.remove();
+                    });
                     
-                }, function(error) {
+                })
+                .catch(function(error) {
                     console.error('Email sending failed:', error);
                     
-                    // Show error message
-                    formMessages.innerHTML = '<i class="fas fa-exclamation-circle me-2"></i>Sorry, there was an error sending your message. Please try again or contact me directly at macdonaldbosman@gmail.com';
-                    formMessages.className = 'error';
+                    let errorMessage = '<i class="fas fa-exclamation-circle me-2"></i><strong>Error!</strong> ';
+                    
+                    // Handle specific error types
+                    if (error.status === 412) {
+                        errorMessage += 'Email service authorization has expired. Please try again later or contact me directly at <a href="mailto:macdonaldbosman@gmail.com">macdonaldbosman@gmail.com</a>';
+                    } else if (error.status === 400) {
+                        errorMessage += 'Invalid form data. Please check your entries and try again.';
+                    } else if (error.status === 403) {
+                        errorMessage += 'Service access denied. Please contact me directly at <a href="mailto:macdonaldbosman@gmail.com">macdonaldbosman@gmail.com</a>';
+                    } else if (!navigator.onLine) {
+                        errorMessage += 'No internet connection. Please check your connection and try again.';
+                    } else {
+                        errorMessage += 'There was an error sending your message. Please try again or contact me directly at <a href="mailto:macdonaldbosman@gmail.com">macdonaldbosman@gmail.com</a>';
+                    }
+                    
+                    showMessage('error', errorMessage);
                 })
                 .finally(function() {
-                    // Re-enable submit button
-                    submitBtn.disabled = false;
-                    submitBtn.innerHTML = '<i class="fas fa-paper-plane me-2"></i>Send Message';
+                    // Reset submit button
+                    resetSubmitButton();
                 });
         });
     }
