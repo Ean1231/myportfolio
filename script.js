@@ -17,6 +17,9 @@ function mlab()
 
 document.addEventListener('DOMContentLoaded', function() {
     
+    // Initialize EmailJS
+    emailjs.init("1RMchPbECF_t2HLD-"); // Replace with your EmailJS PUBLIC KEY (not service ID)
+    
     function updateAgeAndExperience() {
         const birthDate = new Date('1994-01-17'); 
         const careerStartDate = new Date('2020-06-01'); 
@@ -119,6 +122,89 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Scroll indicator functionality
+    const scrollIndicator = document.querySelector('.scroll-indicator');
+    
+    if (scrollIndicator) {
+        scrollIndicator.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const skillsSection = document.querySelector('#skills');
+            if (skillsSection) {
+                const offsetTop = skillsSection.offsetTop - 80;
+                
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+        
+        // Add hover effect
+        scrollIndicator.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateX(-50%) scale(1.1)';
+        });
+        
+        scrollIndicator.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateX(-50%) scale(1)';
+        });
+    }
+
+    // Contact Form Handler
+    const contactForm = document.getElementById('contact-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const formMessages = document.getElementById('form-messages');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Disable submit button and show loading
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
+            
+            // Hide previous messages
+            formMessages.style.display = 'none';
+            formMessages.className = '';
+            
+            // Get form data
+            const formData = new FormData(contactForm);
+            const templateParams = {
+                to_name: 'Ean Bosman',
+                username: formData.get('user_name'),
+                email: formData.get('user_email'),
+                subject: formData.get('subject'),
+                contact: formData.get('user_email'), // Using email since we don't have phone field
+                message: formData.get('message')
+            };
+            
+            // Send email using EmailJS
+            emailjs.send('service_kug2w28', 'template_e23m3rp', templateParams)
+                .then(function(response) {
+                    console.log('Email sent successfully:', response);
+                    
+                    // Show success message
+                    formMessages.innerHTML = '<i class="fas fa-check-circle me-2"></i>Thank you! Your message has been sent successfully. I\'ll get back to you within 24 hours.';
+                    formMessages.className = 'success';
+                    
+                    // Reset form
+                    contactForm.reset();
+                    
+                }, function(error) {
+                    console.error('Email sending failed:', error);
+                    
+                    // Show error message
+                    formMessages.innerHTML = '<i class="fas fa-exclamation-circle me-2"></i>Sorry, there was an error sending your message. Please try again or contact me directly at macdonaldbosman@gmail.com';
+                    formMessages.className = 'error';
+                })
+                .finally(function() {
+                    // Re-enable submit button
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = '<i class="fas fa-paper-plane me-2"></i>Send Message';
+                });
+        });
+    }
 
     // Active navigation highlighting
     const sections = document.querySelectorAll('section[id]');
