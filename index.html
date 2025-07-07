@@ -19,7 +19,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="minimal-style.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -39,9 +39,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#home">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
+
                 <li class="nav-item">
                         <a class="nav-link" href="#skills">Skills</a>
                 </li>
@@ -49,7 +47,7 @@
                         <a class="nav-link" href="#experience">Experience</a>
                 </li>
                 <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
+                        <a class="nav-link" href="#projects">Portfolio</a>
                 </li>
                 <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
@@ -60,233 +58,105 @@
 </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="hero-overlay"></div>
-        <!-- Tech Icons Animation -->
-        <div class="tech-icons">
-            <div class="tech-icon" data-tech="html">
-                <img src="img/html5.png" alt="HTML5">
-            </div>
-            <div class="tech-icon" data-tech="css">
-                <img src="img/css3.png" alt="CSS3">
-            </div>
-            <div class="tech-icon" data-tech="js">
-                <img src="img/JavaScript-logo.png" alt="JavaScript">
-            </div>
-            <div class="tech-icon" data-tech="ionic">
-                <img src="img/2560px-Ionic_Logo.svg.png" alt="Ionic">
-            </div>
-            <div class="tech-icon" data-tech="angular">
-                <img src="img/5847ea22cef1014c0b5e4833.png" alt="Angular">
-            </div>
-            <div class="tech-icon" data-tech="csharp">
-                <img src="img/Csharp_Logo.png" alt="C#">
-            </div>
-            <div class="tech-icon" data-tech="git">
-                <img src="img/Git-Icon-1788C.png" alt="Git">
-            </div>
-            <div class="tech-icon" data-tech="typescript">
-                <img src="img/typescript.png" alt="TypeScript">
-            </div>
-            <div class="tech-icon" data-tech="sql">
-                <img src="img/Sql_data_base_with_logo.png" alt="SQL">
-            </div>
-            <div class="tech-icon" data-tech="github">
-                <img src="img/hubgtt.png" alt="GitHub">
-            </div>
-        </div>
-        
-        <!-- Motherboard Connection Lines -->
-        <div class="tech-connections">
-            <div class="connection-line"></div>
-            <div class="connection-line"></div>
-            <div class="connection-line"></div>
-            <div class="connection-line"></div>
-            <div class="connection-line"></div>
-            <div class="connection-line"></div>
-            <div class="connection-line"></div>
-            <div class="connection-line"></div>
-            <div class="circuit-node"></div>
-            <div class="circuit-node"></div>
-            <div class="circuit-node"></div>
-            <div class="circuit-node"></div>
-        </div>
-        
+    <!-- Hero Section -->
+    <section id="home" class="hero-dark-section">
+        <div class="hero-background-overlay"></div>
         <div class="container">
             <div class="row min-vh-100 align-items-center">
-                <div class="col-lg-8 mx-auto text-center">
-                    <h1 class="hero-title" data-aos="fade-up">
-                        Hi, I'm <span class="text-gradient">Ean Bosman</span>
-                    </h1>
-                    <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
-                        Passionate Software Developer with 4+ years of experience in creating innovative web and mobile applications
-                    </p>
-                    <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
-                        <a href="#about" class="btn btn-primary btn-lg me-3">Learn More</a>
-                        <a href="cv/Resume of Ean Em Bosman.pdf" download="CV of Ean Bosman" class="btn btn-outline-light btn-lg">
-                            <i class="fas fa-download me-2"></i>Download CV
-                        </a>
-                    </div>
-                </div>
-     </div>
-     </div> 
-     </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-5">
-        <div class="container">
-            <div class="section-header text-center mb-5" data-aos="fade-up">
-                <h2 class="section-title">About Me</h2>
-                <div class="section-divider"></div>
-                <p class="section-subtitle">Passionate developer crafting digital experiences</p>
-            </div>
-            
-            <div class="row align-items-center">
-                <div class="col-lg-5 mb-5 mb-lg-0" data-aos="fade-right">
-                    <div class="about-image-container">
-                        <div class="about-image-wrapper">
-                            <img src="img/person/croped/Bosman.jpg" alt="Ean Bosman" class="about-image">
-                            <div class="image-overlay">
-                                <div class="overlay-content">
-                                    <i class="fas fa-code"></i>
-                                    <span>4+ Years Experience</span>
-                                </div>
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="hero-content-wrapper">
+                        <div class="hero-badge">
+                            <span>Welcome</span>
+                        </div>
+                        
+                        <h1 class="hero-main-title">
+                            Hi, I'm <span class="text-highlight">Ean Bosman</span>
+                        </h1>
+                        
+                        <h2 class="hero-subtitle">Full Stack Developer</h2>
+                        
+                        <p class="hero-description">
+                            Passionate Software Developer with <span id="experience-text">5</span> years of experience in creating innovative web and mobile applications. 
+                            I specialize in building modern, responsive, and user-friendly digital experiences.
+                        </p>
+                        
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <span class="stat-number" id="experience-stat">5</span>
+                                <span class="stat-label">Years Experience</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" id="age-stat">31</span>
+                                <span class="stat-label">Years Old</span>
+                            </div>
+                            <!-- <div class="stat-item">
+                                <span class="stat-number">50+</span>
+                                <span class="stat-label">Projects Done</span>
+                            </div> -->
+                            <div class="stat-item">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">Employer Satisfaction</span>
                             </div>
                         </div>
-                        <div class="floating-badge">
-                            <i class="fas fa-laptop-code"></i>
-                            <span>Full Stack Developer</span>
+                        
+                        <div class="hero-buttons">
+                            <a href="#skills" class="btn btn-primary">Learn More</a>
+                            <a href="cv/Resume of Ean Em Bosman.pdf" download="CV of Ean Bosman" class="btn btn-outline-light">
+                                <i class="fas fa-download me-2"></i>Download CV
+                            </a>
+                        </div>
+                        
+                        <div class="hero-social-links">
+                            <a href="https://www.linkedin.com/in/ean-macdonald-bosman-328a801a3" class="social-icon linkedin" target="_blank">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com/Ean1231" class="social-icon github" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.facebook.com/macdonald.bosman.1" class="social-icon facebook" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
                 
-                <div class="col-lg-7" data-aos="fade-left">
-                    <div class="about-content">
-                        <div class="name-title-section mb-4">
-                            <h3 class="about-name">Ean Macdonald Bosman</h3>
-                            <div class="title-badge">
-                                <i class="fas fa-terminal"></i>
-                                <span>Software Developer</span>
-                            </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="hero-image-section">
+                        <div class="hero-image-container">
+                            <div class="image-glow-effect"></div>
+                            <img src="img/person/croped/Bosman pro image.jpg" alt="Ean Bosman" class="hero-profile-image">
+                            <div class="image-overlay-gradient"></div>
                         </div>
                         
-                        <div class="about-description mb-4">
-                            <p class="lead-text">
-                                I am a dedicated and passionate software developer with a deep love for coding and problem-solving. 
-                                With a strong background in software development and 4 years of hands-on experience, I thrive on 
-                                turning innovative ideas into functional, user-friendly software applications.
-                            </p>
-                        </div>
-                        
-                        <div class="info-cards-grid mb-4">
-                            <div class="info-card" data-aos="zoom-in" data-aos-delay="100">
-                                <div class="info-icon">
-                                    <i class="fas fa-birthday-cake"></i>
-                                </div>
-                                <div class="info-content">
-                                    <span class="info-label">Age</span>
-                                    <span class="info-value">31 Years</span>
-                                </div>
+                        <div class="floating-elements">
+                            <div class="floating-icon icon-1">
+                                <i class="fab fa-react"></i>
                             </div>
-                            
-                            <div class="info-card" data-aos="zoom-in" data-aos-delay="200">
-                                <div class="info-icon">
-                                    <i class="fas fa-phone-alt"></i>
-                                </div>
-                                <div class="info-content">
-                                    <span class="info-label">Phone</span>
-                                    <span class="info-value">084 689 4199</span>
-                                </div>
+                            <div class="floating-icon icon-2">
+                                <i class="fab fa-vue"></i>
                             </div>
-                            
-                            <div class="info-card" data-aos="zoom-in" data-aos-delay="300">
-                                <div class="info-icon">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
-                                <div class="info-content">
-                                    <span class="info-label">Email</span>
-                                    <span class="info-value">macdonaldbosman@gmail.com</span>
-                                </div>
+                            <div class="floating-icon icon-3">
+                                <i class="fab fa-html5"></i>
                             </div>
-                            
-                            <div class="info-card" data-aos="zoom-in" data-aos-delay="400">
-                                <div class="info-icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
-                                <div class="info-content">
-                                    <span class="info-label">Location</span>
-                                    <span class="info-value">South Africa</span>
-                                </div>
-                            </div>
-                            
-                            <div class="info-card" data-aos="zoom-in" data-aos-delay="500">
-                                <div class="info-icon">
-                                    <i class="fas fa-briefcase"></i>
-                                </div>
-                                <div class="info-content">
-                                    <span class="info-label">Experience</span>
-                                    <span class="info-value">4+ Years</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="social-section">
-                            <h5 class="social-title">Let's Connect</h5>
-                            <div class="social-links-enhanced">
-                                <a href="https://www.linkedin.com/in/ean-macdonald-bosman-328a801a3" class="social-link-enhanced linkedin" target="_blank">
-                                    <i class="fab fa-linkedin-in"></i>
-                                    <span>LinkedIn</span>
-                                </a>
-                                <a href="https://github.com/Ean1231" class="social-link-enhanced github" target="_blank">
-                                    <i class="fab fa-github"></i>
-                                    <span>GitHub</span>
-                                </a>
-                                <a href="https://www.facebook.com/macdonald.bosman.1" class="social-link-enhanced facebook" target="_blank">
-                                    <i class="fab fa-facebook-f"></i>
-                                    <span>Facebook</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row mt-5">
-                <div class="col-12" data-aos="fade-up">
-                    <div class="journey-section">
-                        <h4 class="journey-title">My Development Journey</h4>
-                        <div class="journey-content">
-                            <div class="journey-item">
-                                <div class="journey-icon">
-                                    <i class="fas fa-rocket"></i>
-                                </div>
-                                <div class="journey-text">
-                                    <p>
-                                        My journey in the world of technology has led me to specialize in web, web-app and mobile application development. 
-                                        I take pride in crafting clean, efficient, and scalable code that not only meets project requirements but also 
-                                        ensures a smooth user experience.
-                                    </p>
-                                </div>
-                            </div>
-                            
-                            <div class="journey-item">
-                                <div class="journey-icon">
-                                    <i class="fas fa-users"></i>
-                                </div>
-                                <div class="journey-text">
-                                    <p>
-                                        In addition to my technical skills, I understand the importance of effective communication and collaboration 
-                                        in the software development process. I enjoy working in cross-functional teams, where I can share my expertise, 
-                                        learn from others, and collectively achieve project success.
-                                    </p>
-                                </div>
+                            <div class="floating-icon icon-4">
+                                <i class="fab fa-css3-alt"></i>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-text">Scroll Down</div>
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
     </section>
+
+
 
     <!-- Skills Section -->
     <section id="skills" class="py-5 bg-light">
@@ -301,7 +171,7 @@
                 <div class="col-lg-6 mb-4" data-aos="fade-right">
                     <div class="skill-item">
                         <div class="d-flex justify-content-between mb-2">
-                            <span class="skill-name">Web Development</span>
+                            <span class="skill-name">React.js</span>
                             <span class="skill-percentage">95%</span>
                         </div>
                         <div class="progress">
@@ -336,6 +206,15 @@
                         </div>
                         <div class="progress">
                             <div class="progress-bar" style="width: 80%"></div>
+            </div>
+        </div>
+        <div class="skill-item">
+            <div class="d-flex justify-content-between mb-2">
+                <span class="skill-name">K2 Framework</span>
+                <span class="skill-percentage">80%</span>
+            </div>
+            <div class="progress">
+                <div class="progress-bar" style="width: 80%"></div>
             </div>
         </div>
     </div>
@@ -373,7 +252,7 @@
                     
                     <div class="skill-item">
                         <div class="d-flex justify-content-between mb-2">
-                            <span class="skill-name">MySQL Database</span>
+                            <span class="skill-name">SQL Server</span>
                             <span class="skill-percentage">90%</span>
                         </div>
                         <div class="progress">
@@ -568,7 +447,10 @@
             <!-- Project Categories -->
             <ul class="nav nav-pills justify-content-center mb-5" id="projectTabs">
                 <li class="nav-item">
-                    <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#mobile-apps">Mobile Apps</button>
+                    <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#featured-projects">Featured Projects</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#mobile-apps">Mobile Apps</button>
                 </li>
                 <li class="nav-item">
                     <button class="nav-link" data-bs-toggle="pill" data-bs-target="#websites">Websites</button>
@@ -579,8 +461,76 @@
             </ul>
             
             <div class="tab-content">
+                <!-- Featured Projects -->
+                <div class="tab-pane fade show active" id="featured-projects">
+                    <div class="row justify-content-center">
+                        <div class="col-12 mb-4">
+                            <div class="featured-projects-header text-center">
+                                <h4>Linkit-up Educational Platform</h4>
+                                <p class="text-muted">A complete educational solution with mobile app and admin dashboard</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-6 mb-4" data-aos="fade-right">
+                            <div class="project-card featured-card">
+                                <div class="project-badge">Mobile App</div>
+                                <div class="project-image">
+                                    <img src="img/Apps shots/Linkit-up.png" alt="Linkit-up">
+                                    <div class="project-overlay">
+                                        <a href="https://delivery-ee9c1.web.app" class="btn btn-light" target="_blank">
+                                            <i class="fas fa-external-link-alt me-2"></i>View Live
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <h5>Linkit-up Mobile App</h5>
+                                    <p>Ionic Educational app that links students to institutions, providing access to latest question papers, study materials, and educational resources.</p>
+                                    <div class="tech-stack">
+                                        <span class="tech-tag">Ionic</span>
+                                        <span class="tech-tag">Angular</span>
+                                        <span class="tech-tag">Firebase</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 mb-4" data-aos="fade-left">
+                            <div class="project-card featured-card">
+                                <div class="project-badge">Admin Dashboard</div>
+                                <div class="project-image">
+                                    <img src="img/Apps shots/Screenshot 2025-06-24 193834.png" alt="Crud Dashboard">
+                                    <div class="project-overlay">
+                                        <a href="https://dashboard-72709.web.app/home" class="btn btn-light" target="_blank">
+                                            <i class="fas fa-external-link-alt me-2"></i>View App
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <h5>Linkit-up Admin Dashboard</h5>
+                                    <p>Comprehensive CRUD dashboard for managing the Linkit-up platform. Handles user management, content administration, and analytics.</p>
+                                    <div class="tech-stack">
+                                        <span class="tech-tag">Angular</span>
+                                        <span class="tech-tag">TypeScript</span>
+                                        <span class="tech-tag">Firebase</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12">
+                            <div class="project-connection">
+                                <div class="connection-line"></div>
+                                <div class="connection-text">
+                                    <i class="fas fa-link"></i>
+                                    <span>Connected Platform</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
                 <!-- Mobile Apps -->
-                <div class="tab-pane fade show active" id="mobile-apps">
+                <div class="tab-pane fade" id="mobile-apps">
                     <div class="row">
                         <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
                             <div class="project-card">
@@ -599,41 +549,26 @@
 </div>
 </div>
 
-                        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-                            <div class="project-card">
-                                <div class="project-image">
-                                    <img src="img/Apps shots/Linkit-up.png" alt="Linkit-up">
-                                    <div class="project-overlay">
-                                        <a href="https://delivery-ee9c1.web.app" class="btn btn-light" target="_blank">
-                                            <i class="fab fa-github me-2"></i>View Live
-                                        </a>
-            </div>
-                    </div>
-                                <div class="project-content">
-                                    <h5>Linkit-up</h5>
-                                    <p>Ionic Educational app that links you to an institution, supplies with latest question papers ect.</p>
-            </div>
-                    </div>
-            </div>
 
-                        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+
+                        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
                             <div class="project-card">
                                 <div class="project-image">
                                     <img src="img/Apps shots/covid new.png" alt="COVID-19 App">
                                     <div class="project-overlay">
-                                        <a href="https://github.com/Ean1231/covid-19-app" class="btn btn-light" target="_blank">
-                                            <i class="fab fa-github me-2"></i>View Code
+                                        <a href="https://inspection-c7023.web.app" class="btn btn-light" target="_blank">
+                                            <i class="fab fa-github me-2"></i>View Live
                 </a>
             </div>
                     </div>
                                 <div class="project-content">
                                     <h5>COVID-19 Tracker</h5>
-                                    <p>Ionic health tracking app</p>
+                                    <p>Ionic Covid-19 awareness app, learn about the virus and how to protect yourself.</p>
         </div>
     </div>
 </div>
 
-                        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
                             <div class="project-card">
                                 <div class="project-image">
                                     <img src="img/Apps shots/image.png" alt="Car Wash App">
@@ -675,7 +610,7 @@
                         <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
                             <div class="project-card">
                                 <div class="project-image">
-                                    <img src="img/Screenshot 2025-02-13 151426.png" alt="All Deliveries">
+                                    <img src="img/Screenshot 2025-02-13 151426.png" alt="man city">
                                     <div class="project-overlay">
                                         <a href="https://all-deliveries.web.app" class="btn btn-light" target="_blank">
                                             <i class="fas fa-external-link-alt me-2"></i>Visit Site
@@ -683,7 +618,7 @@
             </div>
         </div>
                                 <div class="project-content">
-                                    <h5>All Deliveries</h5>
+                                    <h5>Manchester city quiz</h5>
                                     <p>Delivery service platform</p>
         </div>
     </div>
@@ -761,23 +696,7 @@
                                 </div>
         </div>
         </div>
-        
-        <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="img/Apps shots/Screenshot 2025-06-24 193834.png" alt="Crud Dashboard">
-                    <div class="project-overlay">
-                        <a href="https://dashboard-72709.web.app/home" class="btn btn-light" target="_blank">
-                            <i class="fas fa-external-link-alt me-2"></i>View App
-                        </a>
-                    </div>
-                </div>
-                <div class="project-content">
-                    <h5>Crud Dashboard</h5>
-                    <p>Crud Dashboard for Linkit-up app built with Angular</p>
-                </div>
-</div>
-</div>
+
         </div>
         </div>
       </div>
